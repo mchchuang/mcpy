@@ -96,26 +96,35 @@ class CmdPlayer(CmdPositioner):
     def __init__(self, connection, playerId):
         CmdPositioner.__init__(self, connection,  b"player")
         self.conn = connection
-        self.playerId=playerId
+        self.playerId = playerId
 
     def getPos(self) -> Vec3:
         return CmdPositioner.getPos(self, self.playerId)
+    
     def setPos(self, x:float, y:float, z:float) -> None:
         return CmdPositioner.setPos(self, self.playerId, x, y, z)
+    
     def getTilePos(self) -> Vec3:
         return CmdPositioner.getTilePos(self, self.playerId)
+    
     def setTilePos(self, x:int, y:int, z:int) -> None:
         return CmdPositioner.setTilePos(self, self.playerId, x, y, z)
+    
     def getDirection(self) -> Vec3:
         return CmdPositioner.getDirection(self, self.playerId)
+    
     def setDirection(self, x:float, y:float, z:float) -> None:
         return CmdPositioner.setDirection(self, self.playerId, x, y, z)
+    
     def getRotation(self) -> float:
         return CmdPositioner.getRotation(self, self.playerId)
+    
     def setRotation(self, yaw) -> None:
         return CmdPositioner.setRotation(self, self.playerId, yaw)
+    
     def getPitch(self) -> float:
         return CmdPositioner.getPitch(self, self.playerId)
+    
     def setPitch(self, pitch) -> None:
         return CmdPositioner.setPitch(self, self.playerId, pitch)
     
@@ -132,7 +141,7 @@ class CmdPlayer(CmdPositioner):
         self.conn.send(self.pkg + b".setHealth", self.playerId, health)
     
     def sendTitle(self, title:str, subTitle:str="", fadeIn:int=10, stay:int=70, fadeOut:int=20) -> None:
-        self.conn.send(self.pkg + b".sendTitle", id, title, subTitle, fadeIn, stay, fadeOut)
+        self.conn.send(self.pkg + b".sendTitle", self.playerId, title, subTitle, fadeIn, stay, fadeOut)
  
 class CmdPlayerEntity(CmdPlayer):
     """ use entity to build a player """
