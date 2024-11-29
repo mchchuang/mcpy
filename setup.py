@@ -28,7 +28,7 @@ setup(
     # There are some restrictions on what makes a valid project name
     # specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
-    name='pyncraft',  # Required
+    name='mcppy',  # Required
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -36,11 +36,11 @@ setup(
     # For a discussion on single-sourcing the version across setup.py and the
     # project code, see
     # https://packaging.python.org/guides/single-sourcing-package-version/
-    version='0.2.1',  # Required
+    version='0.1',  # Required
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description='Python interface to minecraft + pyncraft bukkit plugin',  # Optional
+    description='Python interface to minecraft with bukkit plugin',  # Optional
 
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
@@ -68,15 +68,17 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url='https://github.com/jdeast/pyncraft',  # Optional
+    url='https://github.com/mchchuang/mcpy',  # Optional
+
+    download_url='https://github.com/mchchuang/mcpy/archive/refs/tags/0.1.tar.gz',
 
     # This should be your name or the name of the organization which owns the
     # project.
-    author='Jason Eastman',  # Optional
+    author='Martin Chuang',  # Optional
 
     # This should be a valid email address corresponding to the author listed
     # above.
-    author_email='jdeast@gmail.com',  # Optional
+    author_email='martin_chuang@icloud.com',  # Optional
 
     # Classifiers help users find your project by categorizing it.
     #
@@ -216,5 +218,4 @@ setup(
     #    'Source': 'https://github.com/pypa/sampleproject/',
     #},
 )
-
 
